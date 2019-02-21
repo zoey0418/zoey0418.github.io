@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<style>
+img.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  -webkit-filter: blur(35px); /* Safari 6.0 - 9.0 */
+  filter: blur(35px);
+}
+
+img.circle {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: 60%;
+}
+
+</style>
+
+
+</head>
+<body>
+
+	<br><br>
+	<h1>My pineapple:</h1>
+	<h2>List for emotions</h2>
+	<ul>
+		<li>Angry</li>
+		<li>Happiness</li>
+		<li>Sadness</li>
+		<li>Fear</li>
+		<li>Disguest</li>
+		<li>Shame</li>
+		<li>Surprise</li>
+	</ul>
+	<img class="background" src="web/pineapple.jpg" alt="Pineapple" width="300" height="300">
+	<img class="circle" src="web/pineapple.jpg" alt="Pineapple" width="300" height="300">
+
+<script type="text/javascript">
+
+// Description: Randomly change background color every 1 seconds
+
+function setbackground()
+{
+window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
+
+var index = Math.round(Math.random() * 9);
+
+var ColorValue = "FFFFFF"; // default color - white (index = 0)
+
+if(index == 1)
+ColorValue = "FFCCCC"; //peach
+if(index == 2)
+ColorValue = "CCAFFF"; //violet
+if(index == 3)
+ColorValue = "A6BEFF"; //lt blue
+if(index == 4)
+ColorValue = "99FFFF"; //cyan
+if(index == 5)
+ ColorValue = "D5CCBB"; //tan
+if(index == 6)
+ColorValue = "99FF99"; //lt green
+if(index == 7)
+ColorValue = "FFFF99"; //lt yellow
+if(index == 8)
+ColorValue = "FFCC99"; //lt orange
+if(index == 9)
+ColorValue = "CCCCCC"; //lt grey
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+
+}
+</script>
+<body onload="setbackground();">
+</body>
+</html>
+
