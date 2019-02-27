@@ -1,0 +1,55 @@
+<html>
+<style>
+body {
+  background-color:#FFE4E1;
+}
+</style>
+
+
+<body><center>
+
+<canvas id="Circle" width="600" height="600" style="border:6px solid #d3d3d3;"></canvas>
+
+<script>
+var canvas = document.getElementById('Circle');
+var context = canvas.getContext('2d');
+var centerX = canvas.width / 2;
+var centerY = canvas.height / 2;
+var radius = 250;
+
+var full = radius*2;
+var amount = 0;
+var amountToIncrease = 10;
+
+function draw() {
+    context.save();
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+    context.clip(); // Make a clipping region out of this path
+    
+    context.fillStyle = '#69C6FF';
+    
+    context.fillRect(centerX - radius, centerY + radius, radius * 2, -amount);
+    context.restore(); // reset clipping region
+
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+    context.lineWidth = 10;
+    context.strokeStyle = '#E89AEB';
+    context.stroke();
+    
+    // Every time, raise amount by some value:
+    amount += amountToIncrease;
+    if (amount > full) amount = 0; // restart
+}
+
+draw();
+// Every second we'll fill more;
+setInterval(draw, 1000);
+</script> 
+
+<button onclick="draw()">Click here</button>
+
+
+</body></center>
+</html>
