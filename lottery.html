@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>who you are?</title>
+    <h1><center><font color="white">Who you are?</font></center></h1>
+
+<style>
+    body{ 
+        background-repeat: no-repeat; background-position: center 15px; background-color: #1F1F1F; 
+    }
+
+
+
+
+#lottery ul {
+    width: 20000px;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#lottery li {
+    background-color: #fff;
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0;
+    height: 100px;
+}
+
+#lottery li img {
+    width: 132px;
+    border: 0;
+}
+
+#lottery-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 375px;
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<div id="wrapper">
+    <div id="lottery">
+        <div id="lottery-hero">
+        </div>
+
+        <div id="lottery-container">
+            <ul>
+                <li><img src="dear.jpg"></li>
+                <li><img src="friends.jpg"></li>
+                <li><img src="phone.jpg"></li>
+                <li><img src="picture.jpg"></li>
+                <li><img src="youtube.jpg"></li>
+                <li><img src="twoseconds.jpg"></li>
+                <li><img src="sleep.jpg"></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</div>
+<script>
+          
+         // get drawer pen
+         var cvs = document.getElementById("wrappe"),
+             ctx = cvs.getContext("2d"),
+             touchRadius = 5;    
+ 
+         ctx.fillStyle = "#ccc";
+         ctx.fillRect(0, 0, 500, 500);    
+         var fillCircle = function (x, y, radius, fillColor) {
+             this.fillStyle = fillColor || "#eee";
+             this.beginPath();
+             this.moveTo(x, y);
+             this.arc(x, y, radius, 0, Math.PI * 2, false);    
+             this.fill();
+         };
+          
+         // get proportion（use others codes, from http://www.cnblogs.com/jscode/p/3580878.html）
+         var getTransparentPercent = function (ctx, width, height) {
+             var imgData = ctx.getImageData(0, 0, width, height),    
+                 pixles = imgData.data,
+                 transPixs = [];
+             for (var i = 0, j = pixles.length; i < j; i += 4) {    
+                 var a = pixles[i + 3];    
+                 if (a === 0) {    
+                     transPixs.push(i);
+                 }
+             }
+             return (transPixs.length / (pixles.length / 4) * 600).toFixed(2);
+         }
+          
+         // （use others codes, from http://www.cnblogs.com/jscode/p/3580878.html）         
+         var device = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()),
+             clickEvtName = device ? 'touchstart' : 'mousedown',
+             moveEvtName = device ? 'touchmove' : 'mousemove';
+         
+         if (!device) {
+             var isMouseDown = false;
+             document.addEventListener('mouseup', function (e) {
+                 isMouseDown = false;
+             }, false);
+         } else {
+             document.addEventListener("touchmove", function (e) {
+                 if (isMouseDown) {
+                     e.preventDefault();
+                 }
+             }, false);
+             document.addEventListener('touchend', function (e) {
+                 isMouseDown = false;
+             }, false);
+         }
+         cvs.addEventListener(clickEvtName, function (e) {
+             isMouseDown = true;
+             var x = (device ? e.touches[0].clientX : e.clientX);
+             var y = (device ? e.touches[0].clientY : e.clientY);
+             ctx.globalCompositeOperation = 'destination-out';    
+             fillCircle.call(ctx, x, y, touchRadius);
+             console.log("the proportion：" + getTransparentPercent(ctx, 500, 600));
+         }, false);
+          
+         // moving
+         cvs.addEventListener(moveEvtName, function (e) {
+             if (!device && !isMouseDown) {
+                 return false;
+             }
+             var x = (device ? e.touches[0].clientX : e.clientX);
+             var y = (device ? e.touches[0].clientY : e.clientY);
+             ctx.globalCompositeOperation = 'destination-out';
+             fillCircle.call(ctx, x, y, touchRadius);
+                          console.log("the proportion：" + getTransparentPercent(ctx, 500, 500));
+         }, false);
+         
+     </script>
+
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+</body>
+</html>
