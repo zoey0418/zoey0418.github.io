@@ -1,0 +1,52 @@
+<head>
+
+<title>loffle</title>
+    
+     <style>
+     
+     body {
+  background-color:#FFE2DE;
+}
+
+     </style>
+ </head>
+  
+<body>
+    
+     <center><canvas id="lottery" style="border:3px solid #000000;"></canvas></center>
+  
+     <script>
+         var c = document.getElementById("lottery");
+               var context = c.getContext("2d");
+               var img = new Image();
+               //img.src = "dear.jpg";
+               var str = "dear";
+               var nums = "000000000112233445566778";
+               var num = nums.charAt(parseInt(Math.random()*25));
+               var jpg = ".jpg";
+               
+               c.style.backgroundImage= 'url'("'+str+num+jpg+'"); 
+               c.style.width = "320px";
+               c.style.height = "160px";
+               context.fillStyle ="#ccc";
+               context.glbalCompositeOperation = "destination-over";
+               context.beginPath();
+               context.fillRect(0,0,320,160);
+               context.closePath();
+               c.onmousemove = function(e)
+               {
+               var x = e.pageX - c.offsetLeft;
+               var Y = e.pageY - c.offsetTop;
+               context.globalCompositeOperation = "destination-out";
+               context.beginPath();
+               context.arc(x,y,10,0,2*Math.PI,true);
+               context.fill();
+               context.closePath();
+               }  
+
+
+     </script>
+     
+ </body>
+ 
+ </html>
