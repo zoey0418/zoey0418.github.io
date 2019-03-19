@@ -2,95 +2,65 @@
 <html>
 <head>
     <title>who you are?</title>
-    <h1><center><font color="white">Who you are?</font></center></h1>
+    <h1><center><font color="black">Who you are?</font></center></h1>
+</head>
+<p id="des" style="text-align: center;"><font color="black">Think about Who Are You, when you start touch Internet.</p></font>
 
 <style>
     body{ 
-        background-repeat: no-repeat; background-position: center 15px; background-color: #1F1F1F; 
+        background-repeat: no-repeat; background-position: center 15px; background-color: #FFF2F5; 
     }
-
-
-
-
-#lottery ul {
-    width: 20000px;
-    position: absolute;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#lottery li {
-    background-color: #fff;
-    float: left;
-    margin: 0 10px 0 0;
-    padding: 0;
-    height: 100px;
-}
-
-#lottery li img {
-    width: 132px;
-    border: 0;
-}
-
-#lottery-container {
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    width: 1000px;
-    height: 375px;
-}
-
-
-
-
 </style>
-
-</head>
 <body>
-<a href="loffle.html">
-<div id="wrapper">
-    <div id="lottery">
-        <div id="lottery-hero">
-        </div>
-
-        <div id="lottery-container">
-            <ul>
-                <li><img src="dear.jpg"></li>
-                <li><img src="friends.jpg"></li>
-                <li><img src="phone.jpg"></li>
-                <li><img src="picture.jpg"></li>
-                <li><img src="youtube.jpg"></li>
-                <li><img src="twoseconds.jpg"></li>
-                <li><img src="sleep.jpg"></li>
-                
-            </ul>
-        </div>
-        
-    </div>
-</div>
-<script>
-          
-         // get drawer pen
-         var cvs = document.getElementById("wrappe"),
-             ctx = cvs.getContext("2d"),
-             touchRadius = 5;    
- 
-         ctx.fillStyle = "#ccc";
-         ctx.fillRect(0, 0, 500, 500);    
-         var fillCircle = function (x, y, radius, fillColor) {
-             this.fillStyle = fillColor || "#eee";
-             this.beginPath();
-             this.moveTo(x, y);
-             this.arc(x, y, radius, 0, Math.PI * 2, false);    
-             this.fill();
-         };
-          
+<center><body>
+  <div class="box">
+    <ul id="gallary">
+        <a href="dear.jpg" title="dear">
+          <img src="dear.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+      
+      
+        <a href="friends.jpg" title="friends">
+          <img src="friends.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+        <a href="youtube.jpg" title="youtube">
+        <img src="youtube.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+        <a href="twoseconds.jpg" title="twoseconds">
+        <img src="twoseconds.jpg"alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
          
-     </script>
+        <a href="sleep.jpg" title="sleep">
+          <img src="sleep.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+      
+      
+        <a href="picture.jpg" title="picture">
+          <img src="picture.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+     
+    </ul>
+    <div style="clear: both;"></div>
+    <img src="" alt="" class="show" id="image">
+  </div>
 
+  <script> 
+   var alA=document.getElementById("gallary").getElementsByTagName("a");
+   for(var i=0;i<alA.length;i++){
+    
+     alA[i].onclick=function(){
+         
+         document.getElementById("image").src=this.href;
+         
+         document.getElementById("des").innerText=this.title;
+         
+         return false;
+     }
+   }
+  </script>
+</body>
 
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-</div>
+</div></center>
+
 </body>
 </html>
