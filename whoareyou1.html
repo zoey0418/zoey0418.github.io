@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>who you are?</title>
+    <h1><center><font color="black">Who you are?</font></center></h1>
+</head>
+<p id="think" style="text-align: center;"><font color="black">Think about Who Are You, when you start touch Internet.</p></font>
+
+<style>
+#mask{
+  position:absolute;
+}
+    body{ 
+        background-repeat: no-repeat; background-position: center 15px; background-color: #FFF2F5; 
+    }
+span{
+  color:yellow;
+  cursor:pointer;
+}
+div{
+
+}
+</style>
+<body>
+<center><body>
+  <canvas id="mask" width="200" height="200"></canvas>
+  <div class="box">
+    <ul id="gallary">
+        <a href="dear.jpg" title="dear">
+          <img src="dear.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+      
+      
+        <a href="friends.jpg" title="friends">
+          <img src="friends.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+        <a href="youtube.jpg" title="youtube">
+        <img src="youtube.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+        <a href="twoseconds.jpg" title="twoseconds">
+        <img src="twoseconds.jpg"alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+         
+        <a href="sleep.jpg" title="sleep">
+          <img src="sleep.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+      
+      
+        <a href="picture.jpg" title="picture">
+          <img src="picture.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
+        </a>
+     
+    </ul></div>
+    <div style="clear: both;">
+    <img src="" alt="" class="show" id="image">
+  </div>
+  <script>
+  var canvas=document.getElementById("mask");
+    var ctx=canvas.getContext('2d');
+    ctx.fillStyle="gray";
+    ctx.fillRect(0,0,200,200);
+    canvas.onmousedown=function(){
+      canvas.onmousemove=function(e){
+        ctx.clearRect(e.offsetX,e.offsetY,20,20);
+      }
+    }
+    canvas.onmouseup=function(){
+      canvas.onmousemove=function(){
+
+      }
+    }
+
+  </script>
+  <script> 
+    
+   var alA=document.getElementById("gallary").getElementsByTagName("a");
+   for(var i=0;i<alA.length;i++){
+    
+     alA[i].onclick=function(){
+         
+         document.getElementById("image").src=this.href;
+         
+         document.getElementById("think").innerText=this.title;
+         
+         return false;
+     }
+   }
+  </script>
+</body>
+
+</div></center>
+
+</body>
+</html>
