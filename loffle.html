@@ -1,10 +1,10 @@
 <!DOCTYPE html>
  
-<head>
+<center><head>
 <title>loffle</title>
      
       
-     <style>
+<style>
      
      body {
   background-color:#F7100B;
@@ -13,14 +13,13 @@
          #price{width: 500px; height: 600px; font-size: 120px; color: #FFE2DE; line-height: 100px; text-align: center;}
           #canvas{position: absolute; top: 0; left: 0;}
      </style>
- </head>
+ </head></center>
 
    
-<body>
- 
- <a href="lottery.html"> 
+<center><body>
+  
      <div id="price">thank you!</div>
-     <canvas id="canvas" width="500" height="600">your reader is not support canvas</canvas>
+     <canvas id="canvas" width="700" height="600">your reader is not support canvas</canvas>
   
      <center><script>
           
@@ -30,7 +29,7 @@
              touchRadius = 20;    
  
          ctx.fillStyle = "#ccc";
-         ctx.fillRect(0, 0, 500, 600);    
+         ctx.fillRect(140, 0, 500, 400);    
          var fillCircle = function (x, y, radius, fillColor) {
              this.fillStyle = fillColor || "#eee";
              this.beginPath();
@@ -79,7 +78,7 @@
              var y = (device ? e.touches[0].clientY : e.clientY);
              ctx.globalCompositeOperation = 'destination-out';    
              fillCircle.call(ctx, x, y, touchRadius);
-             console.log("the proportion：" + getTransparentPercent(ctx, 500, 600));
+             console.log("the proportion：" + getTransparentPercent(ctx, 500, 400));
          }, false);
           
          // moving
@@ -91,9 +90,9 @@
              var y = (device ? e.touches[0].clientY : e.clientY);
              ctx.globalCompositeOperation = 'destination-out';
              fillCircle.call(ctx, x, y, touchRadius);
-                          console.log("the proportion：" + getTransparentPercent(ctx, 500, 600));
+                          console.log("the proportion：" + getTransparentPercent(ctx, 500, 400));
          }, false);
      </script>
- </body>
+ </body></center>
  
  </html>
