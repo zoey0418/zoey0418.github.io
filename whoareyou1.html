@@ -21,10 +21,10 @@ div{
 
 }
 </style>
+
 <body>
-<center><body>
-  <canvas id="mask" width="200" height="200"></canvas>
-  <div class="box">
+
+  <center><div class="box">
     <ul id="gallary">
         <a href="dear.jpg" title="dear">
           <img src="dear.jpg" alt="" width="50" height="50" style="border:2px #ccc solid; padding:5px;">
@@ -51,17 +51,22 @@ div{
         </a>
      
     </ul></div>
+    <h2><font color="black">If you want to see clear about the image, please click them^.^</font></h2>
+    <p id="think" style="text-align: center;"><font color="black">I know you want to see more clear, friend, almost there! you can using mouse to clear it.^.^</font></p>
     <div style="clear: both;">
+    <canvas id="mask" width="1000" height="1000"></canvas>
     <img src="" alt="" class="show" id="image">
-  </div>
+
+  </div></center>
+  
   <script>
-  var canvas=document.getElementById("mask");
+     var canvas=document.getElementById("mask");
     var ctx=canvas.getContext('2d');
     ctx.fillStyle="gray";
-    ctx.fillRect(0,0,200,200);
+    ctx.fillRect(-200,0,800,600);
     canvas.onmousedown=function(){
       canvas.onmousemove=function(e){
-        ctx.clearRect(e.offsetX,e.offsetY,20,20);
+        ctx.clearRect(e.offsetX,e.offsetY,40,40);
       }
     }
     canvas.onmouseup=function(){
@@ -71,21 +76,21 @@ div{
     }
 
   </script>
+
   <script> 
     
    var alA=document.getElementById("gallary").getElementsByTagName("a");
    for(var i=0;i<alA.length;i++){
     
-     alA[i].onclick=function(){
-         
-         document.getElementById("image").src=this.href;
-         
+     alA[i].onclick=function(){         
+         document.getElementById("image").src=this.href;         
          document.getElementById("think").innerText=this.title;
          
          return false;
      }
    }
   </script>
+  <button onclick="javascript:window.location.href='loffle.html';">LOOK HERE</button>
 </body>
 
 </div></center>
