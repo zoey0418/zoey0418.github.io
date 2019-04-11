@@ -1,0 +1,81 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Word Frequency Query Result</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	    $('.search').on('keyup',function(){
+	        var searchTerm = $(this).val().toLowerCase();
+	        $('#userTbl tbody tr').each(function(){
+	            var lineStr = $(this).text().toLowerCase();
+	            if(lineStr.indexOf(searchTerm) === -1){
+	                $(this).hide();
+	            }else{
+	                $(this).show();
+	            }
+	        });
+	    });
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<center><h2>Word Frequency Query Result</h2></center>
+		<div class="form-group pull-right">
+			<input type="text" class="search form-control" placeholder="what you looking for?">
+		</div>
+		<table class="table table-striped" id="userTbl">
+			<thead>
+				<tr>
+					<th>Word</th>
+					<th>Length</th>
+					<th>Count</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Interesting</td>
+					<td>11</td>
+					<td>1459</td>
+				</tr>
+				<tr>
+					<td>One</td>
+					<td>2</td>
+					<td>796</td>
+				</tr>
+				<tr>
+					<td>She</td>
+					<td>3</td>
+					<td>698</td>
+				</tr>
+				<tr>
+					<td>About</td>
+					<td>5</td>
+					<td>675</td>
+				</tr>
+				<tr>
+					<td>Session</td>
+					<td>7</td>
+					<td>621</td>
+				</tr>
+				<tr>
+					<td>Fun</td>
+					<td>3</td>
+					<td>576</td>
+				</tr>
+				<tr>
+					<td>Were</td>
+					<td>4</td>
+					<td>548</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
+
+
+
