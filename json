@@ -1,0 +1,29 @@
+var myvariable = [{
+	"Word": "Interesting",
+	"Length": "11",
+	"Count": "1459"
+}, {
+	"Word": "One",
+	"Length": 2,
+	"Count": 796
+}, {
+	"Word": "She",
+	"Length": 3,
+	"Count": 698
+}, {
+	"Word": "About",
+	"Length": 5,
+	"Count": 675
+}, {
+	"Word": "Session",
+	"Length": 7,
+	"Count": 621
+}, {
+	"Word": "Fun",
+	"Length": 3,
+	"Count": 576
+}, {
+	"Word": "Were",
+	"Length": 4,
+	"Count": 548
+}]
