@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+#chartdiv {
+  width: 100%;
+  max-width: 100%;
+height:550px;
+}
+</style>
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+
+
+var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+chart.legend = new am4charts.Legend();
+
+var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+
+networkSeries.data = [{
+  name: 'Bronx',
+  children: [{
+    name: 'Landmarks',
+    children: [{
+      name: 'Bronx Zoo', value: 1
+    }, {
+      name: 'Yankee Stadium', value: 1
+    }, {
+      name: 'New York Botanical Garden', value: 1
+    }, {
+      name: 'Wave Hill', value: 1
+    }]
+  }, {
+    name: 'Hotels',
+    children: [{
+      name: 'Holiday Inn', value: 1
+    }, {
+      name: 'Best Western Plus Stadium Inn', value: 1
+    }, {
+      name: 'Opera House Hotel', value: 1
+    }, {
+      name: 'Residence Inn', value: 1
+    }]
+  }, {
+    name: 'Restaurtants',
+    children: [{
+      name: 'Moss Cafe', value: 1
+    }, {
+      name: 'Travesias', value: 1
+    }, {
+      name: 'Ripe Kitchen & Bar', value: 1
+    }, {
+      name: 'Hungry Bird', value: 1
+  	}, {
+  	  name: 'Taqueria Tlaxcalli', value:1
+    }]
+  }]
+}, {
+
+  name: 'Queens',
+  children: [{
+    name: 'hotels',
+    children: [{
+      name: 'Queens Hotel', value: 1
+    }, {
+      name: 'Best Western Plus Plaza', value: 1
+    }, {
+      name: 'La Quinta Inn', value: 1
+    }, {
+      name: 'Asiatic Hotel', value: 1
+    }, {
+      name: 'Sheraton Hotel', value: 1
+    }]
+  },{ 
+  	name: 'Restaurtants',
+    children: [{
+      name: 'Kal', value: 1
+    }, {
+      name: 'Chingunae Pocha', value: 1
+    }, {
+      name: 'Yummy Tummy Asian Bistro', value: 1
+    }, {
+      name: 'Lokanta', value: 1
+    }, {
+      name: 'Amylos', value: 1
+    }]
+  }, {
+    name: 'Landmarks',
+    children: [{
+      name: 'The Unisphere and the Panorama of NYC', value: 1
+    }, {
+      name: 'Bohemain Hall and beer Garden', value: 1
+    }, {
+      name: 'Museum of the moving Image', value: 1
+    }, {
+      name: 'Jackson Heights, an Indian and South Asian Neighborhood', value: 1
+    }, {
+      name: 'P.S.1 Contemporary Art Center', value: 1
+    }]
+  }]
+}, {
+  name: 'Manhattan',
+  children: [{
+    name: 'Hotels',
+    children: [{
+      name: 'The Plaza', value: 1
+    }, {
+      name: 'The St.Regis', value: 1
+    }, {
+      name: 'Four Seasons Hotel', value: 1
+    }, {
+      name: 'Algonquin Hotel', value: 1
+    }, {
+      name: 'The Roosevelt Hotel', value:1
+    }, {
+      name: 'New Yorker Hotel', value:1
+    }, {
+      name:'The Carlyle Hotel', value:1
+    }]
+  }, {
+  	name: 'Landmarks',
+    children: [{
+      name: 'Center Park', value: 1
+    }, {
+      name: 'Time Square', value: 1
+    }, {
+      name: 'Statue of Liberty', value: 1
+    }, {
+      name: 'Empire State Building', value: 1
+    }, {
+      name: 'One World Observatory', value: 1
+    }, {
+      name: 'Empire State Building', value: 1
+    }, {
+      name: 'Empire State Building', value: 1
+    }, {
+      name: 'Empire State Building', value: 1
+    }]
+  }, {
+    name: 'Restaurtants',
+    children: [{
+      name: "Katz's Delicatessen", value: 1
+    }, {
+      name: 'Peter Luger', value: 1
+    }, {
+      name: "Lombardi's", value: 1
+    }, {
+      name: 'Keens Steakhouse', value: 1
+    }, {
+      name: 'Mama Mia 44 SW', value: 1
+    }, {
+      name: 'Tavern on the Green', value: 1
+    }]
+  }]
+}, {
+
+   name: 'Brooklyn',
+   children: [{
+    name: 'Landmarks',
+    children: [{
+      name: 'Brooklyn Bridge', value: 1
+    }, {
+      name: 'Prospect Park', value: 1
+    }, {
+      name: 'Brooklyn Museum', value: 1
+    }, {
+      name: 'Brooklyn Flea', value:1
+    }, {
+      name: 'Brooklyn Botanic Garden', value: 1
+    }, {
+      name: 'Brooklyn Heights and Brooklyn Promenade', value: 1
+    }, {
+      name: 'Coney Island Cyclone', value: 1
+    }]
+  }, {
+    name: 'Hotels',
+    children: [{
+      name: 'The Williamsburg Hotel', value: 1
+    }, {
+      name: '1 Hotel Brooklyn Bridge', value: 1
+    }, {
+      name: 'The Tillary Hotel', value: 1
+    }, {
+      name: 'Pod Brooklyn', value:1
+    }, {
+      name: 'Frankin Guesthouse', value: 1
+    }]
+  }, {
+      name: 'Restaurtants',
+    children: [{
+      name: 'Olmsted', value: 1
+    }, {
+      name: 'Sunday in Brooklyn', value: 1
+    }, {
+      name: 'Miss Ada', value: 1
+    }, {
+      name: 'Lilia', value: 1
+    }, {
+      name: 'Misi', value: 1
+    }, {
+      name: 'Aska', value: 1
+    }, {
+      name: 'Di Fara Pizza', value: 1
+    }]
+  }]
+
+}, {
+  name: 'Staten Island',
+  children: [{
+    name: 'Hotel',
+    children: [{
+      name: 'Hilton Garden Inn', value: 1
+    }, {
+      name: 'Hampton Inn & Suites', value: 1
+    }, {
+      name: 'Holiday Inn Express', value: 1
+    }, {
+      name: 'Ramada', value: 1
+    }, {
+      name: 'Comfort Inn', value: 1
+    }]
+  }, {
+    name: 'Restaurtants',
+    children: [{
+      name: 'Beso', value: 1
+    }, {
+      name: 'Alor Cafe', value: 1
+    }, {
+      name: "Denino's Pizzeria Tavern", value: 1
+    }, {
+      name: 'Jade Island', value: 1
+    }, {
+      name: "Ho' Brah Taco", value: 1
+    }]
+   }, {
+    name: 'Landmarks',
+    children: [{
+      name: 'Snug Harbor Cutural Center', value: 1
+    }, {
+      name: 'The National Lighthouse Museum', value: 1
+    }, {
+      name: 'St. George Theatre', value: 1
+    }, {
+      name: 'Staten Island Ferry', value: 1
+    }, {
+      name: 'Fort Wadsworth', value: 1
+   
+    }]
+  }]
+}];
+
+networkSeries.dataFields.linkWith = "linkWith";
+networkSeries.dataFields.name = "name";
+networkSeries.dataFields.id = "name";
+networkSeries.dataFields.value = "value";
+networkSeries.dataFields.children = "children";
+
+networkSeries.nodes.template.tooltipText = "{name}";
+networkSeries.nodes.template.fillOpacity = 1;
+
+networkSeries.nodes.template.label.text = "{name}"
+networkSeries.fontSize = 8;
+networkSeries.maxLevels = 2;
+networkSeries.maxRadius = am4core.percent(6);
+networkSeries.manyBodyStrength = -16;
+networkSeries.nodes.template.label.hideOversized = true;
+networkSeries.nodes.template.label.truncate = true;
+
+}); // end am4core.ready()
+</script>
+
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+</html>
