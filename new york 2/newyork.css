@@ -17,7 +17,7 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-image: url("bj.png");
+  background-image: url("bj.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,8 +30,8 @@ body{
 }
 
 .container > .city{
-  width: 1200px;
-  height: 940px;
+  width: 1000px;
+  height: 840px;
   margin: 10px auto;
   overflow: hidden;
   list-style-type: none;
@@ -445,7 +445,7 @@ img{
 
 /*Manhattan*/
 .Manhattan{
-  margin-left: 160px;
+  margin-left: 300px;
 }
 #Manhattan > .classifications{
   display: none;
@@ -520,7 +520,7 @@ img{
 
 /*Queens*/
 .Queens{
-  margin-left: 900px;
+  margin-left: 600px;
 }
 #Queens > .classifications{
   display: none;
@@ -594,11 +594,8 @@ img{
 
 
 /*Brooklyn*/
-#Brooklyn{
-  margin-top: 130px;
-}
 .Brooklyn{
-  margin-left: 600px;
+  margin-left: 400px;
 }
 #Brooklyn > .classifications{
   display: none;
