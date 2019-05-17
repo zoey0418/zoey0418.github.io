@@ -117,8 +117,12 @@ function showThirdNav(parent,pre,next,color){
 		var nextObj = $("#"+parent+' #'+pre+' .'+next);
 		var nextObjCss = nextObj.css('display');
 		if(nextObjCss == 'none'){
+			$(this).mouseout(function(){
+				$(this).css({'border':'2px solid '+color});
+			});
 			$(this).css({'border':'2px solid '+color});
 			nextObj.css({'display':'inline-block'});
+			
 		}else{
 			$(this).mouseover(function(){
 				$(this).css({'border':'2px solid '+color});
