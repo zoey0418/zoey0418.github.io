@@ -160,6 +160,7 @@ img{
   transform: rotate(50deg);
 }
 
+
 .Hotel,.Restaurtants,.Landmarks{
   width: 68px;
   height: 68px;
@@ -168,6 +169,7 @@ img{
   text-align: center;
   border-radius: 50%;
   font-size: 10px;
+  z-index: 30;
 }
 
 .Hotel,.hotelShops{
@@ -201,7 +203,7 @@ img{
   width: 68px;
   height: 68px;
   position: absolute;
-  z-index: 0;
+  z-index: 10;
   line-height: 68px;
   list-style-type: none;
   display: none;
@@ -217,7 +219,6 @@ img{
   position: absolute;  
   height: 3px;
   z-index: 0; 
-  /*display: none;*/
 }
 .hotelShops > li > .shop01Line{
   width: 12px;
@@ -300,6 +301,7 @@ img{
   text-align: center;
   border-radius: 50%;
   font-size: 10px;
+  z-index: 30;
 }
 .shop01 > span,
 .shop02 > span,
@@ -417,8 +419,12 @@ img{
 #Bronx > .classifications > li > .restaurtantsShops > li > .shop01:hover,
 #Bronx > .classifications > li > .restaurtantsShops > li > .shop02:hover,
 #Bronx > .classifications > li > .restaurtantsShops > li > .shop03:hover,
-#Bronx > .classifications > li > .restaurtantsShops > li > .shop04:hover{
-  /*border: 2px solid #F1F2B0; */
+#Bronx > .classifications > li > .restaurtantsShops > li > .shop04:hover,
+#Bronx > .classifications > li > .landmarksShops > li > .shop01:hover,
+#Bronx > .classifications > li > .landmarksShops > li > .shop02:hover,
+#Bronx > .classifications > li > .landmarksShops > li > .shop03:hover,
+#Bronx > .classifications > li > .landmarksShops > li > .shop04:hover{
+  border: 2px solid #F1F2B0; 
 }
 #Bronx > .classifications > li > .hotelShops > li > .shop01 > span,
 #Bronx > .classifications > li > .hotelShops > li > .shop02 > span,
@@ -488,8 +494,12 @@ img{
 #Manhattan > .classifications > li > .restaurtantsShops > li > .shop01:hover,
 #Manhattan > .classifications > li > .restaurtantsShops > li > .shop02:hover,
 #Manhattan > .classifications > li > .restaurtantsShops > li > .shop03:hover,
-#Manhattan > .classifications > li > .restaurtantsShops > li > .shop04:hover{
-  /*border: 2px solid #F1F2B0; */
+#Manhattan > .classifications > li > .restaurtantsShops > li > .shop04:hover,
+#Manhattan > .classifications > li > .landmarksShops > li > .shop01:hover,
+#Manhattan > .classifications > li > .landmarksShops > li > .shop02:hover,
+#Manhattan > .classifications > li > .landmarksShops > li > .shop03:hover,
+#Manhattan > .classifications > li > .landmarksShops > li > .shop04:hover{
+  border: 2px solid #CA8EBE; 
 }
 #Manhattan > .classifications > li > .hotelShops > li > .shop01 > span,
 #Manhattan > .classifications > li > .hotelShops > li > .shop02 > span,
@@ -552,7 +562,20 @@ img{
 {
   background: #8DCA85;
 } 
-
+#Queens > .classifications > li > .hotelShops > li > .shop01:hover,
+#Queens > .classifications > li > .hotelShops > li > .shop02:hover,
+#Queens > .classifications > li > .hotelShops > li > .shop03:hover,
+#Queens > .classifications > li > .hotelShops > li > .shop04:hover,
+#Queens > .classifications > li > .restaurtantsShops > li > .shop01:hover,
+#Queens > .classifications > li > .restaurtantsShops > li > .shop02:hover,
+#Queens > .classifications > li > .restaurtantsShops > li > .shop03:hover,
+#Queens > .classifications > li > .restaurtantsShops > li > .shop04:hover,
+#Queens > .classifications > li > .landmarksShops > li > .shop01:hover,
+#Queens > .classifications > li > .landmarksShops > li > .shop02:hover,
+#Queens > .classifications > li > .landmarksShops > li > .shop03:hover,
+#Queens > .classifications > li > .landmarksShops > li > .shop04:hover{
+  border: 2px solid #8DCA85; 
+}
 #Queens > .classifications > li > .hotelShops > li > .shop01 > span,
 #Queens > .classifications > li > .hotelShops > li > .shop02 > span,
 #Queens > .classifications > li > .hotelShops > li > .shop03 > span,
@@ -614,7 +637,20 @@ img{
 {
   background: #F05455;
 } 
-
+#Brooklyn > .classifications > li > .hotelShops > li > .shop01:hover,
+#Brooklyn > .classifications > li > .hotelShops > li > .shop02:hover,
+#Brooklyn > .classifications > li > .hotelShops > li > .shop03:hover,
+#Brooklyn > .classifications > li > .hotelShops > li > .shop04:hover,
+#Brooklyn > .classifications > li > .restaurtantsShops > li > .shop01:hover,
+#Brooklyn > .classifications > li > .restaurtantsShops > li > .shop02:hover,
+#Brooklyn > .classifications > li > .restaurtantsShops > li > .shop03:hover,
+#Brooklyn > .classifications > li > .restaurtantsShops > li > .shop04:hover,
+#Brooklyn > .classifications > li > .landmarksShops > li > .shop01:hover,
+#Brooklyn > .classifications > li > .landmarksShops > li > .shop02:hover,
+#Brooklyn > .classifications > li > .landmarksShops > li > .shop03:hover,
+#Brooklyn > .classifications > li > .landmarksShops > li > .shop04:hover{
+  border: 2px solid #F05455; 
+}
 #Brooklyn > .classifications > li > .hotelShops > li > .shop01 > span,
 #Brooklyn > .classifications > li > .hotelShops > li > .shop02 > span,
 #Brooklyn > .classifications > li > .hotelShops > li > .shop03 > span,
@@ -676,7 +712,20 @@ img{
 {
   background: #F6AE8A;
 } 
-
+#StatenIsland > .classifications > li > .hotelShops > li > .shop01:hover,
+#StatenIsland > .classifications > li > .hotelShops > li > .shop02:hover,
+#StatenIsland > .classifications > li > .hotelShops > li > .shop03:hover,
+#StatenIsland > .classifications > li > .hotelShops > li > .shop04:hover,
+#StatenIsland > .classifications > li > .restaurtantsShops > li > .shop01:hover,
+#StatenIsland > .classifications > li > .restaurtantsShops > li > .shop02:hover,
+#StatenIsland > .classifications > li > .restaurtantsShops > li > .shop03:hover,
+#StatenIsland > .classifications > li > .restaurtantsShops > li > .shop04:hover,
+#StatenIsland > .classifications > li > .landmarksShops > li > .shop01:hover,
+#StatenIsland > .classifications > li > .landmarksShops > li > .shop02:hover,
+#StatenIsland > .classifications > li > .landmarksShops > li > .shop03:hover,
+#StatenIsland > .classifications > li > .landmarksShops > li > .shop04:hover{
+  border: 2px solid #F6AE8A; 
+}
 #StatenIsland > .classifications > li > .hotelShops > li > .shop01 > span,
 #StatenIsland > .classifications > li > .hotelShops > li > .shop02 > span,
 #StatenIsland > .classifications > li > .hotelShops > li > .shop03 > span,
