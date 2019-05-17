@@ -113,16 +113,24 @@ function showSecondNav(pre,next,color){
 
 function showThirdNav(parent,pre,next,color){
 	$("#"+parent+' .'+pre).on('click',function(){
+		console.log($(this));
 		var nextObj = $("#"+parent+' #'+pre+' .'+next);
 		var nextObjCss = nextObj.css('display');
 		if(nextObjCss == 'none'){
 			$(this).css({'border':'2px solid '+color});
 			nextObj.css({'display':'inline-block'});
 		}else{
+			$(this).mouseover(function(){
+				$(this).css({'border':'2px solid '+color});
+			});
+			$(this).mouseout(function(){
+				$(this).css({'border':'none'});
+			});
 			$(this).css({'border':'none'});
 			nextObj.css({'display':'none'});
 		}		
 	});
+
 }
 
 function showInfo(id1,id2,shop){
