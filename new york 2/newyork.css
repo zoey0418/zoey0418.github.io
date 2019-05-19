@@ -8,9 +8,8 @@
 }
 body{
   font-size: 14rem/@baseFontSize;
-  font-family: "Microsoft YaHei",sans-serif;
+   font-family: "Comic Sans MS", cursive, sans-serif;
   color: #333;
-  font-family: 'Lucida Console';
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -20,6 +19,7 @@ body{
   background-image: url("bj.png");
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .container{
@@ -69,8 +69,13 @@ body{
   margin: 20px 20px 20px 0;
   width: 40px;
   height: 30px;
+  border-radius: 15px;
+   background-color: white;
 }
-
+.closeBtn:hover{
+  background-color: #339966;
+  color: white;
+}
 .content{
   margin: 10px auto;
   padding: 20px 40px;
@@ -80,9 +85,37 @@ body{
   margin-top: 10px;
 }
 img{
-  display: block;
-}
+    width:50%;
+    height:auto;
+    border-radius: 10px;
+    display: block;
+    margin: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    background: red;
 
+}
+img:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50); 
+
+}
+p {
+ 
+  text-align: justify;
+  font-weight: bold;
+  border: 2px #666666;
+  border-radius: 5px;
+}
+h1{text-align: center;
+    font-size: 24px;
+    background-color: #339966;
+    color: white;
+    border-radius: 50px;
+    padding: 15px; 
+    width: 95%;
+    height: auto; 
+}
 .container > .city > li{
   width: 100%;
   height: 60px;
@@ -104,6 +137,8 @@ img{
   border-radius: 50%;
   display: inline-block;
 }
+
+
 .Bronx > span,
 .Manhattan > span,
 .Queens > span,
@@ -147,6 +182,7 @@ img{
   left: -53px;
   transform: rotate(-90deg);
 }
+
 .restaurtantsLine{
   width: 32px;
   top: 81px;
@@ -391,6 +427,8 @@ img{
 #Bronx > .classifications > li > .Landmarks:hover{
   border: 2px solid #F1F2B0; 
   z-index: 20;
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Bronx > .classifications > li > .Hotel > span,
 #Bronx > .classifications > li > .Restaurtants > span,
@@ -425,6 +463,8 @@ img{
 #Bronx > .classifications > li > .landmarksShops > li > .shop03:hover,
 #Bronx > .classifications > li > .landmarksShops > li > .shop04:hover{
   border: 2px solid #F1F2B0; 
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Bronx > .classifications > li > .hotelShops > li > .shop01 > span,
 #Bronx > .classifications > li > .hotelShops > li > .shop02 > span,
@@ -466,6 +506,8 @@ img{
 #Manhattan > .classifications > li > .Landmarks:hover{
   border: 2px solid #CA8EBE; 
   z-index: 20;
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Manhattan > .classifications > li > .Hotel > span,
 #Manhattan > .classifications > li > .Restaurtants > span,
@@ -500,6 +542,8 @@ img{
 #Manhattan > .classifications > li > .landmarksShops > li > .shop03:hover,
 #Manhattan > .classifications > li > .landmarksShops > li > .shop04:hover{
   border: 2px solid #CA8EBE; 
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Manhattan > .classifications > li > .hotelShops > li > .shop01 > span,
 #Manhattan > .classifications > li > .hotelShops > li > .shop02 > span,
@@ -541,6 +585,8 @@ img{
 #Queens > .classifications > li > .Landmarks:hover{
   border: 2px solid #8DCA85; 
   z-index: 20;
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Queens > .classifications > li > .Hotel > span,
 #Queens > .classifications > li > .Restaurtants > span,
@@ -575,6 +621,8 @@ img{
 #Queens > .classifications > li > .landmarksShops > li > .shop03:hover,
 #Queens > .classifications > li > .landmarksShops > li > .shop04:hover{
   border: 2px solid #8DCA85; 
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Queens > .classifications > li > .hotelShops > li > .shop01 > span,
 #Queens > .classifications > li > .hotelShops > li > .shop02 > span,
@@ -619,6 +667,8 @@ img{
 #Brooklyn > .classifications > li > .Landmarks:hover{
   border: 2px solid #F05455; 
   z-index: 20;
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Brooklyn > .classifications > li > .Hotel > span,
 #Brooklyn > .classifications > li > .Restaurtants > span,
@@ -653,6 +703,8 @@ img{
 #Brooklyn > .classifications > li > .landmarksShops > li > .shop03:hover,
 #Brooklyn > .classifications > li > .landmarksShops > li > .shop04:hover{
   border: 2px solid #F05455; 
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #Brooklyn > .classifications > li > .hotelShops > li > .shop01 > span,
 #Brooklyn > .classifications > li > .hotelShops > li > .shop02 > span,
@@ -692,8 +744,12 @@ img{
 #StatenIsland > .classifications > li > .Hotel:hover,
 #StatenIsland > .classifications > li > .Restaurtants:hover,
 #StatenIsland > .classifications > li > .Landmarks:hover{
-  border: 2px solid #F6AE8A; 
-  z-index: 20;
+border: 2px solid #F6AE8A; 
+z-index: 20;
+opacity: 0.7;
+filter: alpha(opacity=70); 
+
+
 }
 #StatenIsland > .classifications > li > .Hotel > span,
 #StatenIsland > .classifications > li > .Restaurtants > span,
@@ -728,6 +784,8 @@ img{
 #StatenIsland > .classifications > li > .landmarksShops > li > .shop03:hover,
 #StatenIsland > .classifications > li > .landmarksShops > li > .shop04:hover{
   border: 2px solid #F6AE8A; 
+  opacity: 0.7;
+  filter: alpha(opacity=70); 
 }
 #StatenIsland > .classifications > li > .hotelShops > li > .shop01 > span,
 #StatenIsland > .classifications > li > .hotelShops > li > .shop02 > span,
